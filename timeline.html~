@@ -107,14 +107,17 @@
         <div class="searchDiv">
         <form>
         <input class="searchBox" type="text" name="search" placeholder="Search"></input>
+        <input class="searchButton" type="submit" value=""/>
         </form>
         </div>
         <div class="lectureNotesGrey">
-        Test
-        Test
-        Test
-        Test
-        Test
+        <ul class="quickLinks">
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+        </ul>
         </div>
          <div class="search">
           <h1 class="searchHeading">WHAT HAPPENED THIS <br /> WEEK</h1>

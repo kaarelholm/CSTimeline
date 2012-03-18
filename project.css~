@@ -20,7 +20,7 @@
 {
 	background-color:#CCCCCC;
 	width: 100%;
-	height:295px;
+	height:200px;
 	margin:0 auto;
 	margin-top: 35px;
 	padding-top: 35px;
@@ -84,6 +84,11 @@
 	margin-right:14px;
 }
 
+.menu ul a:active
+{
+		color:#3264FB;
+}
+
 .logged
 {
 	list-style:none;
@@ -136,6 +141,7 @@
 	overflow:hidden;
 	margin: 0 auto;
 	padding:0px;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 .leftContent
@@ -345,6 +351,7 @@
 	height: 28px;
 	margin-bottom: 20px;
 	margin-top: 7px;
+	margin-right: 5px;
 }
 
 .searchDiv
@@ -352,8 +359,57 @@
 	margin-top: 0px;
 	overflow: hidden;
 }
-  
+
+.searchButton
+{
+	height: 35px;
+	width:80px;
+	color: green;
+	background-image: url(button.png);
+	border: none;
+	float: right;
+	margin-top: 7px;
+	margin-right: 26px;
+}
+
+.searchButton:hover
+{
+	cursor: pointer;
+}
+
+.quickLinks
+{
 	
+	list-style:none;
+	overflow:hidden;
+	display:inline;
+	font-family:Helvetica;
+	font-size:16px;
+	color: #3264FB;
+	text-decoration:none;
+	margin-right:14px;
+	float: left;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.quickLinks:hover
+{
+	cursor: pointer;
+}
+
+.Grey
+{
+	overflow:hidden;
+	text-align:center;
+	padding-top: 8px;
+	width:262px;
+	background-color: #EBEBEB;
+	margin-left:41px;
+	padding-bottom:15px;
+	padding-top:10px;
+	
+}
 	
 	
 
