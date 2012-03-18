@@ -47,14 +47,14 @@
         </ul>
         <div class="groupSelector">
         <h1 class="group">YOU ARE LOGGED IN AS:</h1>
-        <!--
+        <div class="dropDown">
         <select class="select">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
+          <option value="Y">Y</option>
+          <option value="X">X</option>
+          <option value="Z">Z</option>
+          <option value="10">10</option>
         </select>
-        -->
+        </div>
         </div>
       <hr class="whiteline" />
       </div>
@@ -63,32 +63,32 @@
 
 		<li>
 			<h2 class="lectureName">Week 1</h2>
-			<p>Add a short exerpt here... <a href="http://flickr.com/photos/justbcuz/112479862/">more</a></p>
+			<p><a href="http://flickr.com/photos/justbcuz/112479862/">more</a></p>
 		</li>
 
 		<li>
 			<h2>Week 2</h2>
-			<p>Add a short exerpt here... <a href="http://flickr.com/photos/joshuacraig/2698975899/">more</a> </p>
+			<p><a href="http://flickr.com/photos/joshuacraig/2698975899/">more</a> </p>
 		</li>
 
 		<li>
 			<h2>Week3</h2>
-			<p>Add a short exerpt here... <a href="http://flickr.com/photos/ruudvanleeuwen/468309897/">more</a></p>
+			<p><a href="http://flickr.com/photos/ruudvanleeuwen/468309897/">more</a></p>
 		</li>
 
 		<li>
-			<h2>News Heading</h2>
-			<p>Add a short exerpt here... <a href="http://flickr.com/photos/emikohime/294092478/">more</a></p>
+			<h2>Week 4</h2>
+			<p><a href="http://flickr.com/photos/emikohime/294092478/">more</a></p>
 		</li>
 
 		<li>
-			<h2>News Heading</h2>
+			<h2>Week 5</h2>
 			<p>Add a short exerpt here... <a href="http://www.flickr.com/photos/fensterbme/499006584/">more</a></p>
 		</li>
 
 		<li>
-			<h2>News Heading</h2>
-			<p>Add a short exerpt here... <a href="#">more</a></p>
+			<h2>Week 6</h2>
+			<p><a href="#">more</a></p>
 		</li>
 
 	</ul> <!-- end Slider #1 -->
@@ -103,12 +103,22 @@
           <h1 class="searchHeading">SEARCH & QUICK LINKS</h1>
           <hr class="blackLine" />
         </div>
+        
+        <div class="searchDiv">
+        <form>
+        <input class="searchBox" type="text" name="search" placeholder="Search"></input>
+        </form>
+        </div>
         <div class="lectureNotesGrey">
         Test
         Test
         Test
         Test
         Test
+        </div>
+         <div class="search">
+          <h1 class="searchHeading">WHAT HAPPENED THIS <br /> WEEK</h1>
+          <hr class="blackLine" />
         </div>
       </div>
       <div class="middleContent">
@@ -211,6 +221,9 @@
     </div>
   </div>
 </div>
+  <div class="footer">
+    <hr class="whiteline" />
+  </div>
 
   
 </body>
