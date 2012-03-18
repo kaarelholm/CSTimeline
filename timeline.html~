@@ -110,7 +110,7 @@
         <input class="searchButton" type="submit" value=""/>
         </form>
         </div>
-        <div class="lectureNotesGrey">
+        <div class="Grey">
         <ul class="quickLinks">
         <li>Test</li>
         <li>Test</li>

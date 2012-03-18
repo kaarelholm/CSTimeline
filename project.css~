@@ -314,7 +314,7 @@
 
 .groupSelector
 {
-  width:400px;
+  width:351px;
   float:right;
   text-align: right;
   margin-right: 20px;
@@ -334,6 +334,13 @@
 .select
 {
   margin-bottom: 20px;
+  width: 124px;
+  height: 24px;
+  background-color: #49555F;
+  color: white;
+  font-family: helvetica;
+  font-weight: bold;
+  
 }
 
 .dropDown
