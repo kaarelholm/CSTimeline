@@ -310,13 +310,22 @@
 	font-size: 15px;
 	font-weight:bold;
 	text-align:left;
-	margin-top: 16px;
+	width: 190px;
+	margin: 16px 0px -21px 0px;
 
 }
 
 .select
 {
   margin-bottom: 20px;
+}
+
+.dropDown
+{
+	height: 40px;
+	width: 100px;
+	float: right;
+	margin-right: 40px;
 }
   
 	

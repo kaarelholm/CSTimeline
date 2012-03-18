@@ -60,12 +60,15 @@ change .current class name using plugin option, currentPanel : 'current' */
 }
 
 .mb-panel.current .mb-inside {
-	border-color: #fff;
+	background-image: url(active.png);
+	background-repeat: no-repeat;
 }
 /*** Inside the panel ***/
 .mb-inside {
 	padding: 10px;
-	border: 10px solid #999;
+	background-image: url(notActive.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .mb-inside * {

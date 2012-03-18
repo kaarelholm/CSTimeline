@@ -56,12 +56,19 @@
 change .current class name using plugin option, currentPanel : 'current' */
 .mb-slider .mb-panel.current {
 	cursor: auto;
+	/*border: solid #fff;*/
 }
 
+.mb-panel.current .mb-inside {
+	background-image: url(active.png);
+	background-repeat: no-repeat;
+}
 /*** Inside the panel ***/
 .mb-inside {
 	padding: 10px;
-	border: 10px solid #999;
+	background-image: url(notActive.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .mb-inside * {
@@ -72,7 +79,7 @@ change .current class name using plugin option, currentPanel : 'current' */
 a.mb-scrollButtons {
 	display: block;
 	width: 45px;
-	height: 58px;
+	height: 65px;
 	background: transparent url(../images/arrows2.png) no-repeat;
 	position: absolute;
 	top: 50%;
@@ -85,17 +92,19 @@ a.mb-scrollButtons {
 a.mb-scrollButtons.mb-left {
 	background-position: left top;
 	left: -45px;
+	margin-right: 20px;
 }
 a.mb-scrollButtons.mb-right {
 	background-position: right top;
-	right: -45px;
+	right: -45px;	
+	margin-left: 20px;
 }
-a.mb-scrollButtons.mb-left:hover {
+/*a.mb-scrollButtons.mb-left:hover {
 	background-position: left bottom;
 }
 a.mb-scrollButtons.mb-right:hover {
 	background-position: right bottom;
-}
+}*/
 a.mb-scrollButtons.disabled {
 	display: none;
 }
@@ -110,12 +119,12 @@ a.mb-scrollButtons.disabled {
 }
 .mb-controls a {
 	color: #444;
-	font: 12px Georgia, Serif;
+	font: 10px Georgia, Serif;
 	display: inline-block;
 	text-decoration: none;
 	padding: 2px;
 	height: 18px;
-	margin: 0 5px 0 0;
+	margin: 20px 5px 0 0;
 	text-align: center;
 	outline: 0;
 }
@@ -123,7 +132,7 @@ a.mb-scrollButtons.disabled {
 	color: #fff;
 }
 .mb-active-slider .mb-controls {
-	background: #FFFFFF;
+	background: #CCC;
 }
 
 .test
