@@ -130,48 +130,9 @@
           <h2 class="lectureHeadSmall">Object Orientated Programming II</h2>
           <hr class="blackLine" />
           <div class="lectureNotes">
-            <u class="lectureNumber">Lecture 34: 26.02.2012</u>
-            <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>
-            </div>
-            <div class="lectureNotesGrey">
-              <u class="lectureNumber">Lecture 34: 26.02.2012</u>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>             
-            </div>
-        </div>
+              <?php require 'phpTest.php'?>
+      </div>
+      </div>
       </div>
       <div class="rightContent">
         <div class="materials">

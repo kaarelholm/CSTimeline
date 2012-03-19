@@ -44,7 +44,7 @@
 
 /*** Slider panel ***/
 .mb-slider .mb-panel {
-	margin: 0;
+	margin: 30px 0 0 0;
 	padding: 5px;
 	display: block;
 	cursor: pointer;
@@ -56,17 +56,19 @@
 change .current class name using plugin option, currentPanel : 'current' */
 .mb-slider .mb-panel.current {
 	cursor: auto;
+	margin-top: 0px;
 	/*border: solid #fff;*/
 }
 
 .mb-panel.current .mb-inside {
 	background-image: url(active.png);
 	background-repeat: no-repeat;
+	background-position: center;
 }
 /*** Inside the panel ***/
 .mb-inside {
 	padding: 10px;
-	background-image: url(notActive.png);
+	background-image: url(notActive2.png);
 	background-repeat: no-repeat;
 	background-position: center;
 }

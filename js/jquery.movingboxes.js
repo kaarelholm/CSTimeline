@@ -142,7 +142,7 @@
 			// defined $panels again to include cloned panels
 			base.$panels = base.$el.children()
 				.addClass('mb-panel')
-				.css('margin',0)
+				/*.css('margin','30px 5px 0 5px')*/
 				// inner wrap of each panel
 				.each(function(){
 					if ($(this).find('.mb-inside').length === 0) {
@@ -442,5 +442,7 @@
 	$.fn.getMovingBoxes = function(){
 		return this.data('movingBoxes');
 	};
-
+	
+	
+	
 })(jQuery);
