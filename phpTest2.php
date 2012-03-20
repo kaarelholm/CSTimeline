@@ -16,19 +16,29 @@ function startsWith($haystack, $needle)
           
  $query = "SELECT * FROM Files";
  $result = mysql_query($query);
- 
+ $printMidle = true;
+ $stop = false;
  
  
  if($result )
  {
     
     $week = $_GET['week'];    
+    
      
+    $count = count($name) / 2;
     
     foreach($name as $index => $val)
     { 
-    
-			   
+
+     /* if($index == 0)
+       echo '<div class="middleContent">
+             <div class="materials" name="COMP16212">';
+      
+       if($index = intval(count($name)/2))
+        echo '<div class="rightContent">
+        <div class="materials" name="COMP16212">' ; */
+
       echo "<h1 class='lectureHeading'>" .$val. "</h1>
             <h2 class='lectureHeadSmall'>Object Orientated Programming II</h2>
             <hr class='blackLine' />";
@@ -54,7 +64,8 @@ function startsWith($haystack, $needle)
                   
                  </div>
                  </div>
-                 </div>";
+                 </div>
+                 ";
                  
        }//if
        

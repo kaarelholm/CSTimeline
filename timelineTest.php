@@ -40,10 +40,11 @@
   <div class="wrap">
     <?php require("header.html"); ?>
     <div class="sliderbar">
-     <?php require("slider.html");?>
+     <?php require("slider.php");?>
     </div>
     <div class="week">
-    <u class="weekText">WEEK 2: 24.02.2012 - 24.03.2012</u>
+    <?php $week = $_GET['week'];
+   echo '<u class="weekText">'.'Week: '.$week.'</u>'?>
     </div>
     <div class="Content">
       <div class="leftContent">
@@ -51,7 +52,6 @@
           <h1 class="searchHeading">SEARCH & QUICK LINKS</h1>
           <hr class="blackLine" />
         </div>
-        
         <div class="searchDiv">
         <form>
         <input class="searchBox" type="text" name="search" placeholder="Search"></input>
@@ -72,70 +72,27 @@
           <hr class="blackLine" />
         </div>
       </div>
-      <div class="middleContent">
-        <div class="materials">
-          <h1 class="lectureHeading">COMP 162121</h1>
-          <h2 class="lectureHeadSmall">Object Orientated Programming II</h2>
-          <hr class="blackLine" />
-          <div class="lectureNotes">
-              <?php require 'phpTest.php'?>
+        <div class="middleContent">
+        <div class="materials" name="COMP16212">
+         <?php $name = array("COMP10120", "COMP16121","COMP15111"); require_once( 'phpTest2.php'); ?>
+      
       </div>
       </div>
-      </div>
-      <div class="rightContent">
-        <div class="materials">
-          <h1 class="lectureHeading">COMP 182121</h1>
-          <h2 class="lectureHeadSmall">Fundamentals of Distributed Systems</h2>
-          <hr class="blackLine" />
-            <div class="lectureNotesGrey">
-              <u class="lectureNumber">Lecture 34: 26.02.2012</u>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
+           <div class="rightContent">
+           <div class="materials">
+
               </div>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>             
-            </div>
-            <div class="lectureNotes">
-            <u class="lectureNumber">Lecture 34: 26.02.2012</u>
-            <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>
-              <div class="lectureMaterial">
-                <div class="icon"></div>
-                <h1 class="lectureName">Section 8 - recursion and stuff and just trying some longer text</h1>
-                <div class="linksDiv">
-                  <a class="links" href="#">Open</a>
-                  <a class="links" href="#">Download</a>
-                  <a class="links" href="#">Report about error!</a>
-                </div>
-              </div>
-            </div>
+              </div>  
       </div>
     </div>
   </div>
-</div>
-  <div class="footer">
+    <div class="footer">
     <hr class="whiteline" />
   </div>
+
+</div>
+  
+
 
   
 </body>
