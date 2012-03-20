@@ -14,8 +14,9 @@ function startsWith($haystack, $needle)
           or die('Could not select database');
           
           
- $query = "SELECT name, path FROM Files";
+ $query = "SELECT * FROM Files";
  $result = mysql_query($query);
+ 
  
  if(result)
  {
@@ -23,7 +24,8 @@ function startsWith($haystack, $needle)
     while($row = mysql_fetch_assoc($result))
 	{
 	 
-      if(startswith($row['name'], "week1"))
+      if($row['week'] == 1 && $row['course unit'] == 'COMP10120'
+         && $row['semester'] == 'Semester1')
 	    {   
 	       echo "<div class='lectureMaterial'>";
 	       echo "<div class='icon'></div>";
@@ -31,8 +33,8 @@ function startsWith($haystack, $needle)
 	       echo  $row['name'];
 	       echo "</h1>";
 	       echo "<div class='linksDiv'>";
-	       echo " <a class='links' href='http://soba.cs.man.ac.uk/~avramb1/Files/".$row['name']."'>Open</a>
-	        <a class='links'href='".$row['path']."'>Download</a>
+	       echo " <a class='links' href='#'>Open</a>
+	        <a class='links'href='#'>Download</a>
                   <a class='links' href=''>Report about error!</a>
                   </div>
                   </div>
