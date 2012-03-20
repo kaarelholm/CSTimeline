@@ -450,6 +450,7 @@
 .weekName
 {
   font-family: helvetica;
+
 }
 
 .whoWeAre
@@ -508,6 +509,35 @@
   float: left;
   margin: 10px;
 }
+
+.pictureBogdan
+{
+  width:51px;
+  height:51px;
+  background-image: url(bogdan.jpg);
+  float: left;
+  margin: 10px;
+}
+
+.pictureIhsan
+{
+  width:51px;
+  height:51px;
+  background-image: url(ihsan.jpg);
+  float: left;
+  margin: 10px;
+}
+
+.pictureKaarel
+{
+  width:51px;
+  height:51px;
+  background-image: url(aqib.jpg);
+  float: left;
+  margin: 10px;
+}
+
+
 
 .personName
 {

@@ -38,28 +38,9 @@
 <body>
 <div class="header">
   <div class="wrap">
-      <div class="menu">
-        <ul>
-        <li><a href="timelineTest.php">TIMELINE</a></li>
-        <li><a href="#">COURSES</a></li>
-        <li><a href="#">CURRENT WEEK</a></li>
-        <li><a href="#">CONTACT US</a></li>
-        </ul>
-        <div class="groupSelector">
-        <h1 class="group">YOU ARE LOGGED IN AS:</h1>
-        <div class="dropDown">
-        <select class="select">
-          <option value="Y">Group Y10</option>
-          <option value="X">X</option>
-          <option value="Z">Z</option>
-          <option value="10">10</option>
-        </select>
-        </div>
-        </div>
-      <hr class="whiteline" />
-      </div>
+      <?php require("header.html"); ?>
     <div class="sliderbar">
-    <?php require("slider.html")?>
+    <?php require("slider.html");?>
    </div>
    <div class="emptySpace">
    </div>

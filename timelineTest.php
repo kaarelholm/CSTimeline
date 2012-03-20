@@ -38,61 +38,9 @@
 <body>
 <div class="header">
   <div class="wrap">
-      <div class="menu">
-        <ul>
-        <li><a href="#">TIMELINE</a></li>
-        <li><a href="#">COURSES</a></li>
-        <li><a href="#">CURRENT WEEK</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
-        <div class="groupSelector">
-        <h1 class="group">YOU ARE LOGGED IN AS:</h1>
-        <div class="dropDown">
-        <select class="select">
-          <option value="Y">Group Y10</option>
-          <option value="X">X</option>
-          <option value="Z">Z</option>
-          <option value="10">10</option>
-        </select>
-        </div>
-        </div>
-      <hr class="whiteline" />
-      </div>
+    <?php require("header.html"); ?>
     <div class="sliderbar">
-    <ul id="slider">
-    <!--
-		<li>
-			<h2 class="lectureName">Week 1</h2>
-			<p><a href="http://flickr.com/photos/justbcuz/112479862/">more</a></p>
-		</li>
-    -->
-		<li>
-			<h2 class="weekName">Week 2</h2>
-			<p><a href="contact.html">more</a> </p>
-		</li>
-
-		<li>
-			<h2>Week3</h2>
-			<p><a href="contact.html">more</a></p>
-		</li>
-
-		<li>
-			<h2>Week 4</h2>
-			<p><a href="http://flickr.com/photos/emikohime/294092478/">more</a></p>
-		</li>
-
-		<li>
-			<h2>Week 5</h2>
-			<p>Add a short exerpt here... <a href="http://www.flickr.com/photos/fensterbme/499006584/">more</a></p>
-		</li>
-
-		<li>
-			<h2>Week 6</h2>
-			<p><a href="#">more</a></p>
-		</li>
-
-	</ul> <!-- end Slider #1 -->
-
+     <?php require("slider.html");?>
     </div>
     <div class="week">
     <u class="weekText">WEEK 2: 24.02.2012 - 24.03.2012</u>

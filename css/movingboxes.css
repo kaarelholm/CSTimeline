@@ -65,12 +65,40 @@ change .current class name using plugin option, currentPanel : 'current' */
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+.mb-panel.current .mb-inside h2 {
+	margin-left:106px;
+	font-family: helvetica;
+	margin-top: 30px;
+}
+
+.mb-panel.current .mb-inside a {
+	margin-left:136px;
+	font-family: helvetica;
+	margin-top: 30px;
+}
+
+
 /*** Inside the panel ***/
 .mb-inside {
 	padding: 10px;
 	background-image: url(notActive2.png);
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.mb-inside h2 {
+	margin-left:84px;
+	font-family: helvetica;
+	margin-top: 30px;
+	
+}
+
+.mb-inside a {
+	margin-left:103px;
+	font-family: helvetica;
+	margin-top: 0px;
+	
 }
 
 .mb-inside * {
