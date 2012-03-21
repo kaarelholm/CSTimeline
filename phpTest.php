@@ -16,7 +16,7 @@ function startsWith($haystack, $needle)
           
  $query = "SELECT * FROM Files";
  $result = mysql_query($query);
- 
+ $test = 1;
  
  
  if($result )
@@ -27,10 +27,14 @@ function startsWith($haystack, $needle)
     
     foreach($name as $index => $val)
     { 
-    
+      if($test == 1)
+       echo "test1";
+       $test = 2;
+       if($test == 2)
+        echo"fuck you";
 			   
       echo "<h1 class='lectureHeading'>" .$val. "</h1>
-            <h2 class='lectureHeadSmall'>Object Orientated Programming II</h2>
+            <h2 class='lectureHeadSmall'>Object Orientated Programming  II</h2>
             <hr class='blackLine' />";
             $query2 = $query . " WHERE course_unit = '$val'";
             $result2 = mysql_query($query2);     

@@ -13,11 +13,13 @@ function startsWith($haystack, $needle)
 		  mysql_select_db("11_COMP10120_Y10", $dbLink)
           or die('Could not select database');
           
+function test($name){
           
  $query = "SELECT * FROM Files";
  $result = mysql_query($query);
  $printMidle = true;
  $stop = false;
+ $testing = true;
  
  
  if($result )
@@ -42,6 +44,7 @@ function startsWith($haystack, $needle)
       echo "<h1 class='lectureHeading'>" .$val. "</h1>
             <h2 class='lectureHeadSmall'>Object Orientated Programming II</h2>
             <hr class='blackLine' />";
+      
             $query2 = $query . " WHERE course_unit = '$val'";
             $result2 = mysql_query($query2);     
       while($row = mysql_fetch_assoc($result2))
@@ -50,10 +53,14 @@ function startsWith($haystack, $needle)
         if($row['week'] == $week && $row['semester'] == '1')
 	      {   
 	       
-         
-          echo "<div class='lectureNotes'>    
-	              <div class='lectureMaterial'>
-	              <div class='icon'></div>
+          if($testing == true){
+          echo "<div class='lectureNotes'>";
+          }
+          if($testing == false){ 
+          echo  "<div class='lectureNotesGrey'>";
+          }  
+	        echo  "<div class='lectureMaterial'>";
+	        echo  "<div class='icon'></div>
 	              <h1 class='lectureName'>";
 	        echo  $row['name'];
 	        echo "</h1>";
@@ -66,6 +73,7 @@ function startsWith($haystack, $needle)
                  </div>
                  </div>
                  ";
+          $testing = !($testing);
                  
        }//if
        
@@ -78,7 +86,7 @@ function startsWith($haystack, $needle)
     
  }//if
  
-
+}
 
           
         

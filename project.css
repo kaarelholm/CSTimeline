@@ -164,6 +164,10 @@
 	border-left-width:1px;
 	border-left-color: #CCC;
 	padding-bottom: 30px;
+	border-right:solid;
+	border-right-width:1px;
+	border-right-color: #CCC;
+	border-height: 500px;
 }
 
 .rightContent
@@ -173,9 +177,7 @@
 	margin:0px;
 	float: left;
 	padding-bottom: 30px;
-	border-left:solid;
-	border-left-width:1px;
-	border-left-color: #CCC;
+	
 }
 
 .rightContentAbout
