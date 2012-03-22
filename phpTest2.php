@@ -40,7 +40,7 @@ function test($name){
        if($index = intval(count($name)/2))
         echo '<div class="rightContent">
         <div class="materials" name="COMP16212">' ; */
-
+      
       echo "<h1 class='lectureHeading'>" .$val. "</h1>
             <h2 class='lectureHeadSmall'>Object Orientated Programming II</h2>
             <hr class='blackLine' />";
