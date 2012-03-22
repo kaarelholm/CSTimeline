@@ -37,14 +37,17 @@
 
 <body>
 <div class="header">
-  <div class="wrap">
-      <?php require("header.html"); ?>
+<div class="headerContainer">
+    <?php require("header.html"); ?>
+     </div>
     <div class="sliderbar">
-    <?php require("slider.html");?>
-   </div>
+     <?php require("slider.php");?>
+    </div>
+    </div>
    <div class="emptySpace">
    </div>
    <div class="Content">
+   <div class="wrap">
    <div class="leftContent">
         <div class="search">
           <h1 class="searchHeading">THE A-TEAM</h1>

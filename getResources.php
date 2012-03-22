@@ -7,27 +7,20 @@ function startsWith($haystack, $needle)
 }
 
 
- $dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10", 			 
- 		  "4VB0MQdFK4F7jUaR")
-		  or die('Could not connect: ' . mysql_error());
-		  mysql_select_db("11_COMP10120_Y10", $dbLink)
-          or die('Could not select database');
-          
-function test($name, $week, $semester){
-          
+function test($name, $resource){
+         
  $query = "SELECT * FROM Files";
  $result = mysql_query($query);
  $printMidle = true;
  $stop = false;
- $testing = true;
-
+ 
  
  if($result )
  {
-  
-    
-        
-              
+    /*if ($_GET['week'] != null)
+    {
+    $week = $_GET['week'];    
+    }*/
      
     $count = count($name) / 2;
     
@@ -54,27 +47,23 @@ function test($name, $week, $semester){
             <h2 class='lectureHeadSmall'>" .$row2['course_description']. "</h2>
             <hr class='blackLine' />";
             $query2 = $query . " WHERE course_unit = '$val'";
-            $result2 = mysql_query($query2);   
-            $print = true;  
+            $result2 = mysql_query($query2); 
+            $print = true;    
       while($row = mysql_fetch_assoc($result2))
 	    {
 
-        if($row['week'] == $week && $row['semester'] == $semester)
+        if($row['type'] == $resource)
 	      {   
 	       
-          if($testing == true){
-          echo "<div class='lectureNotes'>";
-          }
-          if($testing == false){ 
-          echo  "<div class='lectureNotesGrey'>";
-          }     
-	        echo  "<div class='lectureMaterial'>";
-	        echo  "<div class='icon'></div>
+         
+          echo "<div class='lectureNotes'>    
+	              <div class='lectureMaterial'>
+	              <div class='icon'></div>
 	              <h1 class='lectureName'>";
 	        echo  $row['name'];
 	        echo "</h1>";
 	        echo "<div class='linksDiv'>";
-	        echo " <a class='links' href='http://soba.cs.man.ac.uk/".$row['path']."'>Open</a>
+	        echo " <a class='links' href='#'>Open</a>
 	               <a class='links'href='#'>Download</a>
                  <a class='links' href=''>Report about error!</a>
                   
@@ -82,10 +71,14 @@ function test($name, $week, $semester){
                  </div>
                  </div>
                  ";
-          $testing = !($testing);
-          $print = false;
+ 	        $print = false;
                  
        }//if
+	//else
+	//{
+	       
+         
+	//}
        
                    
 	   
@@ -102,17 +95,16 @@ function test($name, $week, $semester){
                  echo "</div>
                  </div>
                  ";
-			
+		$print = false;		
 		}//if
-   	  
     }//foreach
     
     
  }//if
  
-}
 
-          
+
+}   
         
 
 

@@ -43,30 +43,57 @@ $dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10",
 	</script>
 <title>CS Timeline </title>
 </head>
-<?php include 'checkDate.php' ?>
-<?php 
 
- $semester = $_GET['semester'];
- 
- $week = $_GET['week'];
-if ($week == null && $semester == null)
-{
-$week = motherfuckingDate(); 
-$semester = motherFuckingSemester();
-header("Location:timelineTest.php?week=".$week."&slider1=".$week."&semester=".$semester."#&slider1=".$week);
-} ?>
+<body>
+<div>
 <body>
 <div class="header">
 <div class="headerContainer">
 <?php require("header.html"); ?>
 </div>
     <div class="sliderbar">
-     <?php require("slider.php");?>
+     <?php require("resourcesSlider.php");?>
     </div>
     </div>
     <div class="week">
-   <?php
-   echo '<u class="weekText">'.'Week: '.$week.'</u>'?>
+    <?php $resource = $_GET['resource'];
+    if ($resource == null)
+    {
+      $resource = 'assignment';
+    }//if
+   if($resource == 'assignment')
+   {
+     echo "<u class='weekText'>Assignments</u>";
+   }//if
+   if($resource == 'lab')
+   {
+     echo "<u class='weekText'>Labs</u>";
+   }//if
+   if($resource == 'examples_class')
+   {
+     echo "<u class='weekText'>Examples Classes</u>";
+   }//if
+   if($resource == 'notes')
+   {
+     echo "<u class='weekText'>Notes</u>";
+   }//if
+   if($resource == 'revision')
+   {
+     echo "<u class='weekText'>Revision</u>";
+   }//if
+   if($resource == 'past_paper')
+   {
+     echo "<u class='weekText'>Past Papers</u>";
+   }//if
+   if($resource == 'workshop')
+   {
+     echo "<u class='weekText'>Workshops</u>";
+   }//if
+   if($resource == 'miscellaneous')
+   {
+     echo "<u class='weekText'>Miscellaneous</u>";
+   }//if
+    ?>
     </div>
     <div class="Content">
     <div class="wrap">
@@ -90,49 +117,37 @@ header("Location:timelineTest.php?week=".$week."&slider1=".$week."&semester=".$s
         <li>Test</li>
         </ul>
         </div>
+         <div class="search">
+          <h1 class="searchHeading">WHAT HAPPENED THIS <br /> WEEK</h1>
+          <hr class="blackLine" />
+        </div>
       </div>
         <div class="middleContent">
         <div class="materials" name="COMP16212">
-        <?php require ( 'phpTest2.php'); 
-	
-          if ($semester == 1)
-		  {
-		     $name = array("COMP10120", "COMP16121"); test ( $name, $week, $semester );
-		  }//if
-		else
-		  {
-		    if($semester == 2)
-		    {$name = array("COMP11212", "COMP14112", "COMP18112"); test (  $name, $week, $semester ); }
-		  } ?>
-		  
+        <?php require ( 'getResources.php'); ?>
+         <?php $name = array("COMP10120", "COMP16121", "COMP16212"); test ( $name, $resource ); ?>
       
       </div>
       </div>
            <div class="rightContent">
            <div class="materials">
-           <?php if ($semester == 1)
-		  {
-		     $name = array("COMP15111", "COMP12111","COMP11120"); test ( $name, $week, $semester ); 
-		  }
-		else
-		  {if($semester == 2)
-		    {$name = array("COMP10120", "COMP11120", "COMP16212"); test (  $name, $week, $semester ); }//if
-		  }
-?>
+           <?php $name = array("COMP15111", "COMP12111","COMP11120"); test ( $name, $resource ); ?>
               </div>
               </div>  
       </div>
     </div>
-   <div class="footer">
-      <div class="footerMaterial">
-          <p> just testing the footer</p>
-      </div>
-      </div>
-    </div>
-    </div>
-<?php mysql_close($dbLink); ?>
-
 
   
+    <div class="footer">
+    <hr class="whiteline" />
+    
+  </div>
+
+</div>
+<?php mysql_close($dbLink); ?>
+  
+
+
+
 </body>
 </html>
