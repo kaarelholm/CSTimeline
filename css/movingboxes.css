@@ -67,13 +67,15 @@ change .current class name using plugin option, currentPanel : 'current' */
 }
 
 .mb-panel.current .mb-inside h2 {
-	margin-left:106px;
+	/*margin-left:106px;*/
+	text-align:center;
 	font-family: "museo-slab-1","museo-slab-2",Helvetica,Arial,sans-serif;
 	margin-top: 30px;
 }
 
 .mb-panel.current .mb-inside a {
 	margin-left:136px;
+	text-align:center;
 	font-family: "museo-slab-1","museo-slab-2",Helvetica,Arial,sans-serif;
 	margin-top: 30px;
 }
@@ -87,18 +89,20 @@ change .current class name using plugin option, currentPanel : 'current' */
 	background-position: center;
 }
 
+
 .mb-inside h2 {
-	margin-left:84px;
-	font-family: helvetica;
-	margin-top: 30px;
-	
+        /*margin-left:84px;*/
+        text-align:center;
+        font-family: helvetica;
+        margin-top: 30px;
+        
 }
 
 .mb-inside a {
-	margin-left:103px;
-	font-family: helvetica;
-	margin-top: 0px;
-	
+        margin-left:103px;
+        text-align:center;
+        font-family: helvetica;
+        margin-top: 0px;
 }
 
 .mb-inside * {

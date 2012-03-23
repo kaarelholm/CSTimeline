@@ -49,7 +49,7 @@ $dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10",
 <body>
 <div class="header">
 <div class="headerContainer">
-<?php require("header.html"); ?>
+<?php require("header.php"); ?>
 </div>
     <div class="sliderbar">
      <?php require("resourcesSlider.php");?>
@@ -99,27 +99,31 @@ $dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10",
     <div class="wrap">
       <div class="leftContent">
         <div class="search">
-          <h1 class="searchHeading">SEARCH & QUICK LINKS</h1>
+          <h1 class="searchHeading">SEARCH</h1>
           <hr class="blackLine" />
         </div>
         <div class="searchDiv">
-        <form>
+         <?php echo '<form action="searchTimeline.php?semester='.$semester.'" method="get">'; ?>
         <input class="searchBox" type="text" name="search" placeholder="Search"></input>
         <input class="searchButton" type="submit" value=""/>
         </form>
         </div>
         <div class="Grey">
-        <ul class="quickLinks">
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        </ul>
-        </div>
-         <div class="search">
-          <h1 class="searchHeading">WHAT HAPPENED THIS <br /> WEEK</h1>
-          <hr class="blackLine" />
+       <ul id="quickLinks" class="quickLinks">
+      <h1 class="searchHeading">QUICK LINKS</h1>
+      <hr class="blackLineLinks" />
+<li><a href="http://www.cs.manchester.ac.uk/">School of Computer Science</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP16121/">Object Oriented Programming Java I</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2010/COMP16212/">Object Oriented Programming Java II</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP18112/">Fundamentals of Distributed Systems</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP11212/">Fundamentals of Computation</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP15111/">Fundamentals of Computer Architecure</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2010/COMP14112/">Fundamentals of Artificial Intelligence</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP12111/">Fundamentals of Computer Engineering</a></li>
+<li><a href="https://moodle.cs.man.ac.uk/login/index.php">Moodle Page for Course-Info</a></li>
+<li><a href="https://moodle.cs.man.ac.uk/login/index.php">Mathematical Techniques for Computer Science</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/timetable/">Group-Wise Time-tables</a></li>
+</ul>
         </div>
       </div>
         <div class="middleContent">

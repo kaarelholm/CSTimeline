@@ -75,8 +75,8 @@ function test($name, $week, $semester){
 	        echo "</h1>";
 	        echo "<div class='linksDiv'>";
 	        echo " <a class='links' href='http://soba.cs.man.ac.uk/".$row['path']."'>Open</a>
-	               <a class='links'href='#'>Download</a>
-                 <a class='links' href=''>Report about error!</a>
+	               
+                 <a class='links' href='contact.php#error'>Report about error!</a>
                   
                  </div>
                  </div>

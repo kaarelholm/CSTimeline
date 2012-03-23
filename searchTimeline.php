@@ -2,8 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="images/favicon.gif"/>
 <link rel="stylesheet" type="text/css" href="project.css"/>
 <link href="css/movingboxes.css" media="screen" rel="stylesheet">
+
+<?php
+$dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10", 			 
+ 		  "4VB0MQdFK4F7jUaR")
+		  or die('Could not connect: ' . mysql_error());
+		  mysql_select_db("11_COMP10120_Y10", $dbLink)
+          or die('Could not select database');
+?>
 
 <!-- Required script -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
@@ -38,67 +47,28 @@
 <body>
 <div class="header">
 <div class="headerContainer">
-<?php require("header.html"); ?>
+<?php 
+ require("header.php"); ?>
 </div>
     <div class="sliderbar">
      <?php require("slider.php");?>
     </div>
     </div>
     <div class="week">
-    <?php $week = $_GET['week'];
-   echo '<u class="weekText">'.'Week: '.$week.'</u>'?>
-    </div>
-    <div class="Content">
-    <div class="wrap">
-      <div class="leftContent">
-        <div class="search">
-          <h1 class="searchHeading">SEARCH & QUICK LINKS</h1>
-          <hr class="blackLine" />
-        </div>
-        <div class="searchDiv">
-        <form>
-        <input class="searchBox" type="text" name="search" placeholder="Search"></input>
-        <input class="searchButton" type="submit" value=""/>
-        </form>
-        </div>
-        <div class="Grey">
-        <ul class="quickLinks">
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        </ul>
-        </div>
-         <div class="search">
-          <h1 class="searchHeading">WHAT HAPPENED THIS <br /> WEEK</h1>
-          <hr class="blackLine" />
-        </div>
-      </div>
-        <div class="middleContent">
-        <div class="materials" name="COMP16212">
-        <?php require ( 'phpTest2.php'); ?>
-         <?php $name = array("COMP10120", "COMP16121"); test ( $name ); ?>
-      
-      </div>
-      </div>
-           <div class="rightContent">
-           <div class="materials">
-           <?php $name = array("COMP15111", "COMP12111","COMP11120"); test ( $name ); ?>
-              </div>
-       </div>       </div>  
+   
+   
+       <?php require ( 'search.php'); ?>
+        
       </div>
     </div>
-    <div class="footer">
+   <div class="footer">
       <div class="footerMaterial">
           <p> just testing the footer</p>
       </div>
       </div>
     </div>
     </div>
-
-
-  
+<?php mysql_close($dbLink); ?>
 
 
   

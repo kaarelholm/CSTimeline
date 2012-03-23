@@ -1,8 +1,9 @@
 
  <ul id="slider">
-    
+   
 		<li>
 			<h2>Week 1</h2>
+			
 			<p><a href="timelineTest.php?week=1&slider1=1&semester=<?php echo $_GET['semester']; ?>#&slider1=1">more</a></p>
 		</li>
     

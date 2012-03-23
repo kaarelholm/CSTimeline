@@ -49,16 +49,20 @@ $dbLink = mysql_connect("ramen.cs.man.ac.uk", "11_COMP10120_Y10",
  $semester = $_GET['semester'];
  
  $week = $_GET['week'];
+ 
+ $startDate = getWeek( $week );
+ $endDate = getWeek1 ( $week );
+ 
 if ($week == null && $semester == null)
 {
-$week = motherfuckingDate(); 
-$semester = motherFuckingSemester();
+$week = theDate(); 
+$semester = theSemester();
 header("Location:timelineTest.php?week=".$week."&slider1=".$week."&semester=".$semester."#&slider1=".$week);
 } ?>
 <body>
 <div class="header">
 <div class="headerContainer">
-<?php require("header.html"); ?>
+<?php require("header.php"); ?>
 </div>
     <div class="sliderbar">
      <?php require("slider.php");?>
@@ -66,29 +70,39 @@ header("Location:timelineTest.php?week=".$week."&slider1=".$week."&semester=".$s
     </div>
     <div class="week">
    <?php
-   echo '<u class="weekText">'.'Week: '.$week.'</u>'?>
+   echo '<u class="weekText">'.'Week: '.$week. ' of semester: ' .$semester.'</u>'?>
+   <?php echo '<h2 class="dateSmall">' .$startDate. ' - ' .$endDate. '</h2>' ?>
+ 
     </div>
     <div class="Content">
     <div class="wrap">
       <div class="leftContent">
         <div class="search">
-          <h1 class="searchHeading">SEARCH & QUICK LINKS</h1>
+          <h1 class="searchHeading">SEARCH</h1>
           <hr class="blackLine" />
         </div>
         <div class="searchDiv">
-        <form>
+         <?php echo '<form action="searchTimeline.php?semester='.$semester.'" method="get">'; ?>
         <input class="searchBox" type="text" name="search" placeholder="Search"></input>
         <input class="searchButton" type="submit" value=""/>
         </form>
         </div>
         <div class="Grey">
-        <ul class="quickLinks">
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-        </ul>
+       <ul id="quickLinks" class="quickLinks">
+      <h1 class="searchHeading">QUICK LINKS</h1>
+      <hr class="blackLineLinks" />
+<li><a href="http://www.cs.manchester.ac.uk/">School of Computer Science</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP16121/">Object Oriented Programming Java I</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2010/COMP16212/">Object Oriented Programming Java II</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP18112/">Fundamentals of Distributed Systems</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP11212/">Fundamentals of Computation</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP15111/">Fundamentals of Computer Architecure</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2010/COMP14112/">Fundamentals of Artificial Intelligence</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/2011/COMP12111/">Fundamentals of Computer Engineering</a></li>
+<li><a href="https://moodle.cs.man.ac.uk/login/index.php">Moodle Page for Course-Info</a></li>
+<li><a href="https://moodle.cs.man.ac.uk/login/index.php">Mathematical Techniques for Computer Science</a></li>
+<li><a href="http://www.cs.manchester.ac.uk/ugt/timetable/">Group-Wise Time-tables</a></li>
+</ul>
         </div>
       </div>
         <div class="middleContent">
@@ -123,11 +137,7 @@ header("Location:timelineTest.php?week=".$week."&slider1=".$week."&semester=".$s
               </div>  
       </div>
     </div>
-   <div class="footer">
-      <div class="footerMaterial">
-          <p> just testing the footer</p>
-      </div>
-      </div>
+    <?php include 'footer.html' ?>
     </div>
     </div>
 <?php mysql_close($dbLink); ?>
